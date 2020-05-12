@@ -54,7 +54,7 @@
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               <a class="nav-item nav-link" href="#">Login</a>
-              <a class="nav-item nav-link" href="#">Register</a>
+              <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
             </div>
           </div>
         </div>
@@ -65,6 +65,14 @@
     <main role="main" class="container">
         <div class="row">
           <div class="col-md-8">
+            {% if messages %}
+              {% for message in messages %}
+                <div class='alert alert-{{ messages.tags }}'>
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+
             {% block content %}{% endblock %}
           </div>
           <div class="col-md-4">
@@ -75,7 +83,6 @@
                   <li class="list-group-item list-group-item-light">Latest Posts</li>
                   <li class="list-group-item list-group-item-light">Announcements</li>
                   <li class="list-group-item list-group-item-light">Calendars</li>
-                  <li class="list-group-item list-group-item-light">etc</li>
                 </ul>
               </p>
             </div>
