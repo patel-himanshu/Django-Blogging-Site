@@ -8,21 +8,21 @@
 
             <fieldset class='form-group'>
                 <legend class='border-bottom mb-4'>
-                    Register Now!
+                    Log In Now!
                 </legend>
                 {{ form|crispy }}
             </fieldset>
 
             <div class='form-group'>
                 <button class='btn btn-outline-info' type='submit'>
-                    Sign Up
+                    Login
                 </button>
             </div>
         </form>
 
         <div class='border-top pt-3'>
             <small class='text-muted'>
-                Do you already have an account? <a href='{% url "login" %}'>Click Here to Sign In</a>
+                Do you need an account? <a href='{% url "register" %}'>Click Here to Sign Up Now</a>
             </small>
         </div>
     </div>
