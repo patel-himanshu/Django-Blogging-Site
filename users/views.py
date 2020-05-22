@@ -30,7 +30,7 @@ def profile(request):
 
     else:
         user_update = UserUpdateForm(instance=request.user)
-        profile_update = ProfileUpdateForm(instance=request.user.proofile)
+        profile_update = ProfileUpdateForm(instance=request.user.profile)
     
     context = {
         'user_update': user_update,
